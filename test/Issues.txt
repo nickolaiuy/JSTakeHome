@@ -1,0 +1,49 @@
+1. App crashes when invalid credentials are entered and submitted for login.
+    Reproduced in SHA Commit: 7601bd85067bbb93554922e4968e14e7b23b6e85
+    Repository: https://github.com/makuneru/Simple-App-Selenium-Mocha-NodeJS/commits/master
+
+    Repro Steps:
+    1. Open the webapp via browser url: "https://localhost:3000"
+    2. Click the login link.
+    3. Enter an invalid username credentials. 
+        - ex. "InvalidUserName";
+    4. Enter an invalid password credentials.
+        - ex. "InvalidPassword";
+    5. Click Submit button.
+
+    Expected Result: An error message appears regarding invalid login credentials. User is not logged in.
+    Actual Result: App loads then crashes. You have to run the app again.
+
+
+2. Error message does not appear when incomplete input credentials are entered for login.
+    Reproduced in SHA Commit: 7601bd85067bbb93554922e4968e14e7b23b6e85
+    Repository: https://github.com/makuneru/Simple-App-Selenium-Mocha-NodeJS/commits/master
+
+    Repro Steps:
+    1. Open the webapp via browser url: "https://localhost:3000"
+    2. Click the login link.
+    3. Click Submit button.
+
+    Expected Result: An error message appears regarding invalid login or missing login credentials. User is not logged in.
+    Actual Result: No error message appears. The page refreshes and user is not logged in. 
+
+    Note:
+    - Also reproducible when entering only the username or only the password then clicking the submit button. 
+
+3. Registered user cannot log in using the correct credentials stored in the database.
+    Reproduced in SHA Commit: 7601bd85067bbb93554922e4968e14e7b23b6e85
+    Repository: https://github.com/makuneru/Simple-App-Selenium-Mocha-NodeJS/commits/master
+
+    Repro Steps:
+    1. Open the webapp via browser url: "https://localhost:3000"
+    2. Click the login link.
+    3. Enter valid login credentials for username and password
+        - username: jill
+        - password: birthday
+    4. Click Submit button.
+
+    Expected Result: User is logged in and can navigate to the profile or logout.
+    Actual Result: The webpage refreshes and is directed back to the login page. User is not logged in. 
+
+
+
