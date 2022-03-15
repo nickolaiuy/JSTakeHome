@@ -4,9 +4,9 @@ require('chromedriver');
 const {Builder, By} = require('selenium-webdriver');
 const {assert} = require('chai');
 const { expect } = require('chai');
-const WelcomePage = require("/webdev/UI_NSX/takehome/Simple-App-Selenium-Mocha-NodeJS/test/pages/WelcomePage");
-const LogInPage = require("/webdev/UI_NSX/takehome/Simple-App-Selenium-Mocha-NodeJS/test/pages/LogInPage");
-const ProfilePage = require("/webdev/UI_NSX/takehome/Simple-App-Selenium-Mocha-NodeJS/test/pages/ProfilePage");
+const WelcomePage = require("./pages/WelcomePage");
+const LogInPage = require("./pages/LogInPage");
+const ProfilePage = require("./pages/ProfilePage");
 const driver = new Builder().forBrowser('chrome').build();
 describe('Simple App', function() {
 
